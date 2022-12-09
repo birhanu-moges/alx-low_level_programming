@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description:  check random number 
+ * Description: check random number 
  * Return: 0 (success)
  */
 
@@ -24,7 +24,6 @@ int main(void)
 	else
 	{
 		 printf("%d is %s\n", n, "zero");
-	}	
-
+	}
 	return (0);
 }
