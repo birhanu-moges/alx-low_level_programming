@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: check random number 
+ * Description: check random number
  * Return: 0 (success)
  */
 
