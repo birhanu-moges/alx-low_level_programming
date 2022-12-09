@@ -18,15 +18,16 @@ int main(void)
 	val = val % 10;
 	if (val > 5)
 	{
-		printf("Last figit of %d is %s\n", n, "and is greater than 5");
-	}
-	else if (val == 0)
-	{
-		printf("Last figit of %d is %s\n", n, "and is zero");
+		printf("Last figit of %d is %d %s\n", n, val, "and is greater than 5");
 	}
 	else if (val < 6 && val != 0)
 	{
-		printf("Last figit of %d is %s\n", n, "and is less than 6 and not 0");
+		printf("Last figit of %d is %d %s\n", n, val, "and is zero");
+	}
+	else
+	{
+		printf("Last figit of %d is %d %s\n", n, val,
+			      "and is less than 6 and not 0");
 	}
 	return (0);
 }
