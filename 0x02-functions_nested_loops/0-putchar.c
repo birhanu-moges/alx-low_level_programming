@@ -1,11 +1,19 @@
-#include <stdio.h>
+#include <myheader.h>
 /**
- * Main - entry point 
+ * Main - entry point
  * Discription: printing string
  * Return: (0) success
  */
 
 int main(void)
 {
-	printf("_putchar\");
+	char *prt = "_putchar";
+
+	while (*ptr)
+	{
+		_putchar(*ptr);
+		ptr++;
+	}
+	_putchar('\n');
+	return (0);
 }
