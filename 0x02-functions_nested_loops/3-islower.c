@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * _islower - entry point
+ * @nb: The letter to be checked
  * Discription: check is lower letter
  * Return: (0) success
  */
