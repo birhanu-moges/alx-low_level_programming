@@ -6,7 +6,10 @@ int _putchar(char c)
 }
 int main(void)
 {
-	_putchar('0' + 8);
+	int n = 98;
+	_putchar('0' +( n % 10));
+	n = -44;
+	_putchar('0' + (-n%10));
 	_putchar('\n');
 
 	return 0;
