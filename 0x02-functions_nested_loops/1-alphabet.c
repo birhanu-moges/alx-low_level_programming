@@ -7,15 +7,7 @@
 
 int main(void)
 {
-	char *ptr = "_putchar";
-
-	while (*ptr)
-	{
-		_putchar(*ptr);
-		ptr++;
-	}
-	_putchar('\n');
-	return (0);
+	print_alphabet();
 }
 
 void print_alphabet(void)
