@@ -1,4 +1,4 @@
-#include <myheader.h>
+#include <main.h>
 /**
  * Main - entry point
  * Discription: printing string
