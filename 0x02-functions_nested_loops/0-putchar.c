@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * Main - entry point
+ * main - entry point
  * Discription: printing string
  * Return: (0) success
  */
