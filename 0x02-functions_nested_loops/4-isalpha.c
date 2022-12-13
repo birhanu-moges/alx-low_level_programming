@@ -2,7 +2,7 @@
 /**
  * _isalpha- entry point
  * @c: The letter to be checked
- * Discription: check character is a letter 
+ * Discription: check character is a letter
  * Return: (0) success
  */
 
