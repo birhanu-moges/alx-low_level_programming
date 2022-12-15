@@ -1,5 +1,6 @@
 #include <stdio.h>
-/** main - Entry point
+/**
+ * main - Entry point
  * Description: largest prime factor
  * Return: (0) success
  */
@@ -9,7 +10,7 @@ int main(void)
 	int i;
 	int j;
 	int largestPrime = 1;
-	int chckNumberIsprime = 0;
+	int checkNumberIsprime = 0;
 
 	for (i = 2; i <= 612852475143; i++)
 	{
