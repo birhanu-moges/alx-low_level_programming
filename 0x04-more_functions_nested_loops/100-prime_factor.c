@@ -7,10 +7,10 @@
 
 int main(void)
 {
-	int i;
-	int j;
-	int largestPrime = 1;
-	int checkNumberIsprime = 0;
+	long i;
+	long j;
+	long largestPrime = 1;
+	long checkNumberIsprime = 0;
 
 	for (i = 2; i <= 612852475143; i++)
 	{
@@ -30,5 +30,5 @@ int main(void)
 	}
 
 	if (largestPrime > 1)
-		printf("%d\n", largestPrime);
+		printf("%ld\n", largestPrime);
 }
