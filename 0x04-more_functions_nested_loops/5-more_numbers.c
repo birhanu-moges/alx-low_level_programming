@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * more_numbers - multiply two values
  * Description: print ten times numbers 0 to 14
