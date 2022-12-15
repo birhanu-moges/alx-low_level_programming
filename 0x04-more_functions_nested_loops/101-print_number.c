@@ -1,10 +1,9 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * print_number - a function print a number.
  * @n : the number
- *
+ * Return :  void
  */
 
 
