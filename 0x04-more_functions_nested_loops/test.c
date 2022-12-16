@@ -28,8 +28,18 @@ void recursive(int n)
 
 int main(void)
 {
+
+
+	recursive(98);
+	_putchar('\n');
+	recursive(402);
+	_putchar('\n');
+	recursive(1024);
+   
+	_putchar('\n');
+	recursive(0);
+	_putchar('\n');
 	recursive(-98);
 	_putchar('\n');
-
 	return (0);
 }	
