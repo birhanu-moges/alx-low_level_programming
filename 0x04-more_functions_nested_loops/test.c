@@ -11,7 +11,7 @@ void recursive(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -1 * n;
+		n *= -1;
 	}
 	if (n / 10 ==0)
 		_putchar(n + '0');
@@ -28,15 +28,8 @@ void recursive(int n)
 
 int main(void)
 {
-	recursive(98);
-	_putchar('\n');
-	recursive(402);
-	 _putchar('\n');
-	recursive(1024);
-	_putchar('\n');
-	recursive(0);
-	_putchar('\n');
 	recursive(-98);
+	_putchar('\n');
 
 	return (0);
 }	
