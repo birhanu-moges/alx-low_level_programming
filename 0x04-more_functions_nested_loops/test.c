@@ -8,6 +8,11 @@ int _putchar(char c)
 
 void recursive(int n)
 {
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -1 * n;
+	}
 	if (n / 10 ==0)
 		_putchar(n + '0');
 	else
@@ -30,6 +35,8 @@ int main(void)
 	recursive(1024);
 	_putchar('\n');
 	recursive(0);
+	_putchar('\n');
+	recursive(-98);
 
 	return (0);
 }	
