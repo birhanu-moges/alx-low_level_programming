@@ -7,14 +7,14 @@
 
 int main(void)
 {
-	long int i;
-	long int j;
-	long int largestPrime = 1;
-	long int checkNumberIsprime = 0;
+	int i;
+	int j;
+	int largestPrime = 1;
+	int checkNumberIsprime = 0;
 
-	for (i = 2; i <= 612852475143; i++)
+	for (i = 2; i <= 15; i++)
 	{
-		if (612852475143 % i == 0)
+		if (15 % i == 0)
 		{
 			for (j = 2; j <= i; j++)
 			{
@@ -30,5 +30,5 @@ int main(void)
 	}
 
 	if (largestPrime > 1)
-		printf("%ld\n", largestPrime);
+		printf("%d\n", largestPrime);
 }
