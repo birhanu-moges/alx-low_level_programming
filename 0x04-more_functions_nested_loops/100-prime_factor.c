@@ -1,34 +1,31 @@
 #include <stdio.h>
 /**
- * main - Entry point
- * Description: largest prime factor
- * Return: (0) success
+ * main - largest prime facter of 612852475143.
+ * Return: 0
  */
-
 int main(void)
 {
-	long int i;
-	long int j;
-	long int largestPrime = 1;
-	long int checkNumberIsprime = 0;
+	long int i, j, k;
 
-	for (i = 2; i <= 612852475143; i++)
+	k = -1;
+	i = 612852475143;
+	while (i % 2 == 0)
 	{
-		if (612852475143 % i == 0)
-		{
-			for (j = 2; j <= i; j++)
-			{
-				if (i % j == 0)
-				{
-					checkNumberIsprime++;
-				}
-			}
-		}
-		if (checkNumberIsprime == 1)
-		largestPrime = i;
-		checkNumberIsprime = 0;
+		k = 2;
+		i = i / 2;
 	}
-
-	if (largestPrime > 1)
-		printf("%ld\n", largestPrime);
+	for (j = 3; j <= i / 2; j = j + 2)
+	{
+		while (i % j == 0)
+		{
+			k = j;
+			i = i / j;
+		}
+	}
+	if (i > 2)
+	{
+		k = i;
+	}
+	printf("%ld\n", k);
+	return (0);
 }
