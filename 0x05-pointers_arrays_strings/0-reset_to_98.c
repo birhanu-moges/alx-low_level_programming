@@ -2,7 +2,7 @@
 /**
  * reset_to_98 - checkes uppercase
  * Description: reset to 98
- * @*n: pointer
+ * @n: pointer
  * Return: void
  */
 
