@@ -17,13 +17,10 @@ int _strcmp(char *s1, char *s2)
 			i++;
 			continue;
 		}
-		else if (s1[i] > s2[i])
-			return (s1[i] - s2[i]);
-		else
-			return (s2[i] - s1[-]);
+		return (s1[i] - s2[i]);
 	}
 	if (s1[i] != '\0')
 		return (s1[i]);
-	return (s2[i]);
+	return (-1 * s2[i]);
 
 }
