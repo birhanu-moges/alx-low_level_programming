@@ -23,6 +23,5 @@ char *_strcat(char *dest, char *src)
 	}
 	if (src_length > 0)
 		dest[dest_length] = '\0';
-	_putchar('\n');
 	return (dest);
 }
