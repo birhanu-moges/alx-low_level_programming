@@ -10,8 +10,8 @@ char *leet(char *str)
 {
 	int i = 0;
 	int j = 0;
-	char letters[] = "aeotl";
-	char decode[] = "43071";
+	char letters[] = {'a', 'e', 'o', 't', 'l', '\0'};
+	char decode[] = {'4', '3', '0', '7', '1'};
 
 	while (str[i])
 	{
