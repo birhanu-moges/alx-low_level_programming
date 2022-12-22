@@ -10,16 +10,15 @@ char *leet(char *str)
 {
 	int i = 0;
 	int j = 0;
-	char letter[] = "aeotl";
-	char decode[] = "43071";
-
+	char letter[5] = {'a', 'e', 'o', 't', 'l'};
+	char decode[5] = {'4', '3', '0', '7', '1'};
+	
 	while (str[i])
 	{
-		while (letter[j])
+		for (j=0; j < 5; j++)
 		{
 			if (str[i] == letter[j] || str[i] == letter[j] - ' ')
 				str[i] == decode[j];
-			j++;
 		}
 		i++;
 	}
