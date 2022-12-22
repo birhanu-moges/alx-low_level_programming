@@ -19,6 +19,7 @@ char *leet(char *str)
 		{
 			if (str[i] == letter[j] || str[i] == letter[j] - ' ')
 				str[i] == decode[j];
+			j++;
 		}
 		i++;
 	}
