@@ -13,8 +13,9 @@ int main(int argc, char *argv[])
 {
 	if (argc != 2)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (-1);
 	}
-	return (*argv * (*(argv + 1)));
+	printf("%d\n", (atoi(*argv) * atoi((*(argv + 1))));
+	return (0);
 }
