@@ -6,12 +6,12 @@
  * @argc: total command line arguments
  * @argv: string arrays in command line
  *
- * Return: (1) on success
+ * Return: (0) on success
  */
 
 int main(int argc, char *argv[])
 {
 	argc = argc;
 	printf("%s\n", *argv);
-	return (1);
+	return (0);
 }
