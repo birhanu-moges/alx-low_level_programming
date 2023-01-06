@@ -9,7 +9,7 @@
  * Return: (1) on success
  */
 
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	printf("%s\n", argv[argc]);
 	return (1);
