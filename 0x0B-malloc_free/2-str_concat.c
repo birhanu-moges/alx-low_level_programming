@@ -18,16 +18,15 @@ char *str_concat(char *s1, char *s2)
 		l1++;
 	while (s2[l2] != '\0')
 		l2++;
-	if (l1 == 0 && l2 == 0)
-		return (NULL);
+	 if (s1 == NULL)
+                S1 = "";
+        if (s2 == NULL)
+                s2 = "";
+
 	ptr = malloc(sizeof(char) * (l1 + l2 + 1));
 
 	if (ptr == NULL)
 		return (NULL);
-	if (s1 == NULL)
-		S1 = "";
-	if (s2 == NULL)	
-		s2 = "";
 	while (index < l1)
 	{
 		ptr[index] = s1[index];
