@@ -24,6 +24,10 @@ char *str_concat(char *s1, char *s2)
 
 	if (ptr == NULL)
 		return (NULL);
+	if (s1 == NULL)
+		S1 = "";
+	if (s2 == NULL)	
+		s2 = "";
 	while (index < l1)
 	{
 		ptr[index] = s1[index];
