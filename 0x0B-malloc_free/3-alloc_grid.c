@@ -1,41 +1,36 @@
-#include "notrebloh.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * **alloc_grid - function to allocate memory to grid
- * @width: int type
- * @height: int type
- * Return: grid of 0s
+ * alloc_grid - creates and returns two dimensioal arry of integers
+ * @width: width of 2D array
+ * @height: height of 2D array
+ *
+ * Return: return pointer for 2D array
  */
+
 int **alloc_grid(int width, int height)
 {
-	int x, y;
-	int **ptr;
+        int **ptr;
+        int i, j;
 
-	if (width <= 0 || height <= 0)
-	{
-		return  (NULL);
-	}
-	ptr = malloc(height * sizeof(int *));
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
-	for (x = 0; x < height; x++)
-	{
-		ptr[x] = malloc(width * sizeof(int));
-		if (ptr[x] == NULL)
-		{
-			for (y = 0; y < x;  y++)
-				free(ptr[y]);
-			free(ptr);
-			return (NULL);
-		}
-		for (y = 0; y < width; y++)
-		{
-			ptr[x][y] = 0;
-		}
-	}
-	return (ptr);
+        if (width <= 0 || height <= 0)
+                return (NULL);
+        ptr = malloc(sizeof(int *) * height);
+        if (ptr == NULL)
+                return (NULL);
+        for (i = 0; i < height; i++)
+        {
+                ptr[i] == malloc(width * sizeof(int));
+                if (ptr[i] == NULL)
+                {
+                        for (j = 0; j < i; j++)
+                                free(ptr[j]);
+                        free(ptr);
+                        return (NULL);
+                }
+                for (j = 0; j < width; j++)
+                        ptr[i][j] = 0;
+        }
+        return (ptr);
 }
+
