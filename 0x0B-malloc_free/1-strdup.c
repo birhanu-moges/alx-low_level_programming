@@ -12,14 +12,19 @@ char *_strdup(char *str)
 	unsigned int i = 0, j = 0;
 	char *ptr = 0;
 
-	if (*str == "" || str == '\0')
+	if (str == "" || str == NULL)
 		return (NULL);
 
-	while (str)
+	while (str[i] != '\0')
 		i++;
 	i++;
 	ptr = malloc(sizeof(char) * i);
-	while (j <= i)
+	while (j < i)
+	{
+		if (ptr == NULL)
+			return (NULL);
 		prt[j] = str[j];
+		j++;
+	}
 	return (ptr);
 }
