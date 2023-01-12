@@ -31,6 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ptr[index] = s1[index];
 		index++;
+	}
 	while (index < l1 + l2)
 	{
 		ptr[index] = s2[index - l1];
