@@ -32,10 +32,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr[index] = s1[index];
 		index++;
 	}
-	while (index < l1 + l2)
+	if (n >= l2)
 	{
-		ptr[index] = s2[index - l1];
-		index++;
+		
+		while (index < l1 + l2)
+		{
+			ptr[index] = s2[index - l1];
+			index++;
+		}
+	}
+	if (n < l2)
+	{
+		while (index < l1 + n)
+		{
+			ptr[index] = s2[index-l1];
+			index++;
+		}
 	}
 	ptr[index] = '\0';
 	return (ptr);
