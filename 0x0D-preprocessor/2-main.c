@@ -4,8 +4,8 @@
  *
  * Return: 0 on scucess
  */
-void main(void)
+int main(void)
 {
-	printf("%s\n", _FILE_);
+	printf("%s\n", __FILE__);
 	return (0);
 }
