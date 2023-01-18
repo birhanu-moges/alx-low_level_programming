@@ -10,12 +10,7 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	int len = 0;
-
 	if (name == NULL || name == "")
 		return;
-	while (name[len])
-		len++;
-	name  = malloc(sizeof(char) * len);
 	f(name);
 }
