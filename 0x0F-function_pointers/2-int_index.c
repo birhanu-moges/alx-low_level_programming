@@ -9,9 +9,9 @@
  * Return: index of a value
  */
 
-int int_index(int *array, size_t size, void (*cmp)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
-	size_t i = 0;
+	int i = 0;
 
 	if (size <= 0)
 		return (-1);
