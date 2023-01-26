@@ -1,4 +1,4 @@
-#include <lists.h>
+#include "lists.h"
 #include <stdio.h>
 
 /**
@@ -9,19 +9,17 @@
  */
 size_t print_list(const list_t *h)
 {
-	list_t *current;
 	size_t list_size = 0;
 
 	if (h == NULL)
 		return (list_size);
-	current = h;
-	while (current)
+	while (h)
 	{
-		printf("[%d]", current->len);
-		printf(" %s", current->str);
+		printf("[%d]", h->len);
+		printf(" %s", h->str);
 		printf("\n");
 		list_size++;
-		current = current->next;
+		h = h->next;
 	}
 	return (list_size);
 }
