@@ -7,7 +7,7 @@
  *
  * Return: size of list
  */
-size_t print_list(const listint_t *h)
+size_t print_listint(const listint_t *h)
 {
 	size_t list_size = 0;
 
@@ -15,7 +15,7 @@ size_t print_list(const listint_t *h)
 		return (list_size);
 	while (h)
 	{
-		printf("[%d]", h->len);
+		printf("%d", h->n);
 		printf("\n");
 		list_size++;
 		h = h->next;
