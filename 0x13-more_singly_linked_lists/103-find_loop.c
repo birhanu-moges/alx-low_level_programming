@@ -12,9 +12,9 @@ listint_t *find_listint_loop(listint_t *head)
 	listint_t *sp, *fp, *tmp;
 	unsigned int flag = 0;
 
-	if (*head == NULL)
+	if (head == NULL)
 		return (NULL);
-	sp = fp = tmp = *head;
+	sp = fp = tmp = head;
 	while (sp && fp && fp->next)
 	{
 		sp = sp->next;
@@ -33,6 +33,7 @@ listint_t *find_listint_loop(listint_t *head)
 			tmp = tmp->next;
 			sp = sp->next;
 		}
+		return (tmp->next);
 	}
-	return (tmp_next);
+	return (NULL);
 }
