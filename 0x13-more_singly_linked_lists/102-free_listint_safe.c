@@ -35,7 +35,7 @@ size_t free_listint_safe(listint_t **h)
 		}
 		sp->next = NULL;
 	}
-	tmp = fp;
+	tmp = tmp->next;
 	while (tmp)
 	{
 		index++;
