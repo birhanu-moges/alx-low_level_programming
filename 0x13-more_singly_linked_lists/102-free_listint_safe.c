@@ -7,13 +7,13 @@
  * Return: return the size of a list
  */
 
-size_t free_listint_safe(lintint_t **h)
+size_t free_listint_safe(listint_t **h)
 {
-	listint_t *sp, *fp, tmp;
+	listint_t *sp, *fp, *tmp;
 	unsigned int flag = 0, index = 0;
 
 	if (*h == NULL)
-		return (*h);
+		return (0);
 	sp = fp = tmp = *h;
 	while (sp && fp && fp->next)
 	{
@@ -35,7 +35,7 @@ size_t free_listint_safe(lintint_t **h)
 		}
 		sp->next = NULL;
 	}
-	tmp = *h;
+	tmp = fp;
 	while (tmp)
 	{
 		index++;
