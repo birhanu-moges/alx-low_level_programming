@@ -9,12 +9,12 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int bitAtIndex;
-
+	int bitAtIndex;
+	
 	bitAtIndex = (n >> index) & 1;
 
 	if ((bitAtIndex == 1) || (bitAtIndex == 0))
-		return ((int)bitAtIndex);
+		return (bitAtIndex);
 	else
 		return (-1);
 }
