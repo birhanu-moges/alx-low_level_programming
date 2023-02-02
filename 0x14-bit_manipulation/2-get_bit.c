@@ -1,20 +1,19 @@
 #include "main.h"
-#include <limits.h>
-
 /**
- * get_bit - function that returns the value of a bit at a given index.
- * @n: number to scan.
- * @index: bit to return.
+ * get_bit - get value of a bit at a given index
+ * @n: given number
+ * @index: given index
  *
- * Return: Bit (0 | 1)
+ * Return: bit at given index or -1 of error
  */
+
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int bit;
+	int bitAtIndex;
 
-	bit = ((n >> index) & 1);
-	if (index > 64)
+	bitAtIndex = ((n >> index) & 1);
+	if ((bitAtIndex == 1) || (bitAtIndex == 0))
+		return (bitAtIndex);
+	else
 		return (-1);
-	return (bit);
 }
-
