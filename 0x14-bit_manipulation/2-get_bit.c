@@ -14,7 +14,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	bitAtIndex = (n >> index) & 1;
 
 	if ((bitAtIndex == 1) || (bitAtIndex == 0))
-		return (bitAtIndex);
+		return ((int)bitAtIndex);
 	else
 		return (-1);
 }
