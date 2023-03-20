@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 /**
- * print_slistint - prints list elements
+ * print_dlistint - prints list elements
  * @h: head of a list
  * Return: number of node or 0
  */
