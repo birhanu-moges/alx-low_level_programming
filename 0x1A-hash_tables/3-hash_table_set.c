@@ -1,5 +1,30 @@
 # include "hash_tables.h"
 # include <string.h>
+
+/**
+ * node_create - creates a node element
+ * @key:  key value
+ * @value: value of a node
+ *
+ * Return: new Node on sucess or NULL if fails
+ */
+hash_node_t *node_create(const char *key, const char *value)
+{
+	hash_node_t *element;
+
+	element = malloc(sizeof(hash_node_t));
+	if (element == NULL)
+		return (NULL);
+	element->key = malloc(strlen(key) + 1);
+	element->value = malloc(strlen(value) + 1);
+	if (element->key == NULL || element->value == NULL)
+		return (NULL);
+	strcpy(element->key, key);
+	strcpy(element->value, value);
+	element->next = NULL;
+	return (element);
+}
+
 /**
  * hash_table_set - adds an element to hash table
  * @ht:  hash table
@@ -11,28 +36,16 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *element;
+	hash_node_t *newNode;
 	unsigned long int index;
 
-	if (strlen(key) == 0 || ht == NULL)
+	if (strlen(key) == NULL || ht == NULL)
 		return (0);
-	element = malloc(sizeof(hash_node_t));
-	if (element == NULL)
-		return (0);
-	element->key = malloc(strlen(key) + 1);
-	if (element->key == NULL)
-		return (0);
-	element->value = malloc(strlen(value) + 1);
-	if (element->value == NULL)
-		return (0);
-	strcpy(element->key, key);
-	strcpy(element->value, value);
-	element->next = NULL;
 
 	index = hash_djb2((unsigned char *)key) % (ht->size);
 	if (ht->array[index] == NULL)
 	{
-		ht->array[index] = element;
+		ht->array[index] = newNode;
 		return (1);
 	}
 	else
@@ -41,11 +54,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 		while (current->next)
 		{
-			if (strcmp(current->key, key))
+			if (strcmp(current->key, key) == 0)
 				return (0);
 			current = current->next;
 		}
-		current->next = element;
+		current->next = newNode;
 		return (1);
 	}
 	return (0);
