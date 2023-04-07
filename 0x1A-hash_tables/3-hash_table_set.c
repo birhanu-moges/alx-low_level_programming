@@ -39,8 +39,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *newNode;
 	unsigned long int index;
 
-	if (strlen(key) == NULL || ht == NULL)
+	if (key == NULL || ht == NULL)
 		return (0);
+	newNode = node_create(key, value);
 
 	index = hash_djb2((unsigned char *)key) % (ht->size);
 	if (ht->array[index] == NULL)
