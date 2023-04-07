@@ -11,7 +11,6 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	const char *value_cpy = strdup(value);
 	hash_node_t *element;
 	unsigned long int index;
 
@@ -27,7 +26,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (element->value == NULL)
 		return (0);
 	strcpy(element->key, key);
-	strcpy(element->value, value_cpy);
+	strcpy(element->value, value);
+	element->next = NULL;
 
 	index = hash_djb2((unsigned char *)key) % (ht->size);
 	if (ht->array[index] == NULL)
@@ -40,7 +40,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		hash_node_t *current = ht->array[index];
 
 		while (current->next)
+		{
+			if (strcmp(current->key, key))
+				return (0);
 			current = current->next;
+		}
 		current->next = element;
 		return (1);
 	}
