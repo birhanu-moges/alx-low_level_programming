@@ -58,10 +58,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		while (current->next)
 		{
 			if (strcmp(current->key, key) == 0)
-				return (0);
+			{
+				if (strcmp(current->value, value) == 0)
+					return (1);
+				free(current->value);
+				current->value  = malloc(strlen(value) + 1);
+				if ((current->value) == NULL)
+					return (0);
+				strcpy(current->value, value);
+				return (1);
+			}
 			current = current->next;
 		}
-		current->next = newNode;
+		newNode->next = ht->array[index];
+		ht->array[index] = newNode;
 		return (1);
 	}
 	return (0);
